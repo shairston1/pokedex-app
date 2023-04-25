@@ -21,10 +21,44 @@ let pokemonList = [
 /* iterates through pokemon list array, first checks if height is greater or equal
 to 2, if condition is met a special message is printed with the name and height of pokemon
 */
-for (let i=0; i < pokemonList.length; i++){
-  if (pokemonList[i].height >=2){
-  document.write(pokemonList[i].name + ' (height: ' +  pokemonList[i].height + ') - That is a big pokemon!</br>')}
-  else {
-    document.write(pokemonList[i].name + ' (height: ' + pokemonList[i].height + ')</br>')}
+// for (let i=0; i < pokemonList.length; i++){
+//   if (pokemonList[i].height >=2){
+//   document.write(pokemonList[i].name + ' (height: ' +  pokemonList[i].height + ') - That is a big pokemon!</br>')}
+//   else {
+//     document.write(pokemonList[i].name + ' (height: ' + pokemonList[i].height + ')</br>')}
+//   }
+
+
+// changed for loop into forEach -- external function
+// pokemonList.forEach(displayAll);
+
+// function displayAll(item) {
+//   if (item.height >=2){
+//     document.write(item.name + '(height: ' + item.height + ') - That is a big pokemon! </br>')
+//   }
+//   else {
+//     document.write(item.name + '(height: ' + item.height + ') </br>')
+//   }
+// }
+
+//internal anymous function
+pokemonList.forEach(function(item) {
+  if (item.height >=2){
+    document.write(item.name + '(height: ' + item.height + ') - That is a big pokemon! </br>')
   }
-  
+  else {
+    document.write(item.name + '(height: ' + item.height + ') </br>')
+  }
+});
+
+// //arrow function
+// pokemonList.forEach( item => {
+//   if (item.height >=2){
+//     document.write(item.name + '(height: ' + item.height + ') - That is a big pokemon! </br>')
+//   }
+//   else {
+//     document.write(item.name + '(height: ' + item.height + ') </br>')
+//   }
+// });
+
+
